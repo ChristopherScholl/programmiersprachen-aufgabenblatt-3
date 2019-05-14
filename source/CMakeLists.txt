@@ -4,7 +4,7 @@ add_executable(2_und_3
   )
 
   # Build aufgabe 4 bis 6
-add_executable(2_und_3
+add_executable(4_bis_6
   aufgabe_4_bis_6.cpp
   circle.cpp
   )
