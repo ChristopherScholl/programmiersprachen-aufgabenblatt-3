@@ -63,33 +63,3 @@ bool operator >(Circle2& c1, Circle2& c2){
     return false;
   }
 }
-
-//void Circle2::draw(Window const& win)const {
-//  Vec2 start;
-//  Vec2 rad{ 0.0,-radius_ };
-//  start += mid_;
-//  start += rad;
-//
-//  for (int i = 0; i < 360; i++) {
-//    float stox = (radius_ / 50.0) * cos(6.28318530718 / 360 * i) + start.x_;
-//    float stoy = (radius_ / 50.0) * sin(6.28318530718 / 360 * i) + start.y_;
-//    Vec2 stop{ stox,stoy };
-//    win.draw_line(start.x_, start.y_, stop.x_, stop.y_, color_.r_, color_.g_, color_.b_, 1.0);
-//    start = stop;
-//  }
-//}
-
-//void Circle2::draw(Window const& win, float t)const {
-//  Vec2 start;
-//  Vec2 rad{ 0.0,-radius_ };
-//  start += mid_;
-//  start += rad;
-//
-//  for (int i = 0; i < 360; i++) {
-//    float stox = (radius_ / 50.0) * cos(6.28318530718 / 360 * i) + start.x_;
-//    float stoy = (radius_ / 50.0) * sin(6.28318530718 / 360 * i) + start.y_;
-//    Vec2 stop{ stox,stoy };
-//    win.draw_line(start.x_, start.y_, stop.x_, stop.y_, color_.r_, color_.g_, color_.b_, t);
-//    start = stop;
-//  }
-//}

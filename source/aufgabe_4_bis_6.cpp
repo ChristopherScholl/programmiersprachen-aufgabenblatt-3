@@ -1,8 +1,6 @@
 #include "Circle.hpp"
 
-#include <list>
 #include <set>
-#include <map>
 #include <iostream>
 #include <algorithm>
 
@@ -18,5 +16,8 @@ int main(int argc, char* argv[])
 
   std::cout << c_1 << "\n";
   std::cout << c_2 << "\n";
+  std::cout << (1 == 2) << "\n";
+  std::cout << (1 > 2) << "\n";
+  std::cout << (1 < 2) << "\n";
 
 }

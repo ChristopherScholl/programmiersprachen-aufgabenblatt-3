@@ -16,8 +16,6 @@ public:
   float circumference() const;
   bool is_inside(Vec2 v) const;
   std::string print() const;
-  /*void draw(Window const& win) const;
-  void draw(Window const& win, float t) const;*/
 
 private:
   std::string name_ = "YEE";
