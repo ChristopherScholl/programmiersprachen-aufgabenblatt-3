@@ -12,6 +12,7 @@ class Circle2
 public:
   Circle2() {}
   Circle2(std::string name, Vec2 const& mid, float const& radius, Color const& color) :name_(name), mid_(mid), radius_(radius), color_(color) {}
+  std::string get_name() const;
   float get_radius() const;
   float circumference() const;
   bool is_inside(Vec2 v) const;
@@ -25,8 +26,8 @@ private:
 };
 
 std::ostream& operator <<(std::ostream& os, Circle2 const& c);
-bool operator ==(Circle2& c1, Circle2& c2);
-bool operator <(Circle2& c1, Circle2& c2);
-bool operator >(Circle2& c1, Circle2& c2);
+bool operator ==(Circle2 const& c1, Circle2 const& c2);
+bool operator <(Circle2 const& c1, Circle2 const& c2);
+bool operator >(Circle2 const& c1, Circle2 const& c2);
 
 # endif // CIRCLE2_HPP

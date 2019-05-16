@@ -8,6 +8,10 @@
 #include <iostream>
 #include <string>
 
+std::string Circle2::get_name() const {
+  return name_;
+}
+
 float Circle2::get_radius() const {
   return radius_;
 }
@@ -37,7 +41,7 @@ std::ostream& operator <<(std::ostream& os, const Circle2 const& c) {
   return os << c.print();
 }
 
-bool operator ==(Circle2& c1, Circle2& c2){
+bool operator ==(Circle2 const& c1, Circle2 const& c2){
   if (c1.get_radius() == c2.get_radius()) {
     return true;
   }
@@ -46,7 +50,7 @@ bool operator ==(Circle2& c1, Circle2& c2){
   }
 }
 
-bool operator <(Circle2& c1, Circle2& c2){
+bool operator <(Circle2 const& c1, Circle2 const& c2){
   if (c1.get_radius() < c2.get_radius()) {
     return true;
   }
@@ -55,7 +59,7 @@ bool operator <(Circle2& c1, Circle2& c2){
   }
 }
 
-bool operator >(Circle2& c1, Circle2& c2){
+bool operator >(Circle2 const& c1, Circle2 const& c2){
   if (c1.get_radius() > c2.get_radius()) {
     return true;
   }
