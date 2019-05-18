@@ -1,8 +1,10 @@
 #include <list>
 #include <set>
 #include <map>
+#include <vector>
 #include <iostream>
 #include <algorithm>
+# include <iterator>
 
 int main(int argc, char* argv[])
 {
@@ -23,13 +25,19 @@ int main(int argc, char* argv[])
     }
   }
 
-  std::cout << "Diese Liste beinhaltet " << 101 - ergebnis.size() << " verschiedene Zahlen\n";
-  std::cout << "\n";
-  std::cout << "Folgende Zahlen beinhaltet sie nicht:\n";
-  std::cout << "\n";
+  std::cout << "Diese Liste beinhaltet " << 101 - ergebnis.size() << " verschiedene Zahlen\n" << "\n";
+
+  std::vector <int> random_vector(100);
+
+  std::copy(random_list.begin(), random_list.end(), random_vector.begin());
+
+  std::copy(std::cbegin(random_vector), std::cend(random_vector),
+    std::ostream_iterator <int>(std::cout, "|"));
+
+  std::cout << "\n"  << "\n" << "Folgende Zahlen beinhaltet sie nicht:\n" << "\n";
 
   for (int n : ergebnis) {
-    std::cout << n << " ";
+    std::cout << n << "|";
   }
   
   for (int i = 0; i < 100; i++) {
@@ -43,17 +51,15 @@ int main(int argc, char* argv[])
     }
   }
   
-  std::cout << "\n";
-  std::cout << "\n";
+  std::cout << "\n" << "\n";
   std::cout << "Die Zahlen treten in der Liste mit folgenden Haeufigkeiten auf:\n";
   std::cout << "\n";
 
   for (int i = 0; i < 100; i++) {
     if (haeufigkeit.count(i) != 0) {
-      std::cout << i << ":" << haeufigkeit[i] << ' ';
+      std::cout << i << ":" << haeufigkeit[i] << '|';
     }
   }
 
   std::cout << "\n";
-
 }
