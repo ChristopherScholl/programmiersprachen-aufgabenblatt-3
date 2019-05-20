@@ -29,8 +29,8 @@ int main(int argc, char* argv[])
   std::cout << "-----------------------------------------------------\n" << "\n";
 
   //std::sort(sorted_circles.begin(), sorted_circles.end());
-
   std::sort(sorted_circles.begin(), sorted_circles.end(), [](Circle2 c1, Circle2 c2)-> bool {return c1 < c2; });
+  //std::sort(sorted_circles.begin(), sorted_circles.end(), std::less<int>(Circle2 c1, Circle2 c2));
 
   for (auto& circle : sorted_circles) {
     std::cout << circle << "\n";
