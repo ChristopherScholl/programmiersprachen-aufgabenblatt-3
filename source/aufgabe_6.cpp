@@ -1,10 +1,12 @@
-#include "Circle.hpp"
-
-#include <vector>
+# define CATCH_CONFIG_RUNNER
+# include <catch.hpp>
+# include <cmath>
+# include <algorithm>
 #include <iostream>
-#include <algorithm>
+# include <vector>
+# include "Circle.hpp"
 
-int main(int argc, char* argv[])
+TEST_CASE("sortiere Kreise", "[ sort ]")
 {
   Circle2 c_1;
   Vec2 mid_2;
@@ -30,9 +32,15 @@ int main(int argc, char* argv[])
 
   //std::sort(sorted_circles.begin(), sorted_circles.end());
   std::sort(sorted_circles.begin(), sorted_circles.end(), [](Circle2 c1, Circle2 c2)-> bool {return c1 < c2; });
-  //std::sort(sorted_circles.begin(), sorted_circles.end(), std::less<int>(Circle2 c1, Circle2 c2));
 
   for (auto& circle : sorted_circles) {
     std::cout << circle << "\n";
   }
+
+  REQUIRE(std::is_sorted(sorted_circles.begin(), sorted_circles.end()));
+}
+
+int main(int argc, char* argv[])
+{
+  return Catch::Session().run(argc, argv);
 }

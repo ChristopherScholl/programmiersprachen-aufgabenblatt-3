@@ -24,3 +24,8 @@ add_executable(aufgabe_9
 add_executable(aufgabe_11
   aufgabe_11.cpp
   )
+
+      # Build aufgabe 13
+add_executable(aufgabe_13
+  aufgabe_13.cpp
+  )
